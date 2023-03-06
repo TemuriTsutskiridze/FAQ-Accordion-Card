@@ -4,6 +4,13 @@ body {
     min-height: 100vh;
     padding: 148px 0 95px;
     box-sizing: border-box;
+
+    @media (min-width: 1440px) {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .main_container {
@@ -18,11 +25,21 @@ body {
     flex-direction: column;
     margin: auto;
 
-    .image {
+    @media (min-width: 1440px) {
+        width: 920px;
+        padding: 65px 95px 83px 475px;
+        overflow: hidden;
+    }
+
+    .image-mobile {
         position: absolute;
         left: 50%;
         top: 0;
         transform: translate(-50%, -59%);
+
+        @media (min-width: 1440px) {
+            display: none;
+        }
 
         .illustration-mobile {
             width: 237px;
@@ -37,6 +54,42 @@ body {
             transform: translateX(-50%);
         }
     }
+
+    .image-desktop {
+        display: none;
+        position: absolute;
+        left: -90px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @media (min-width: 1440px) {
+            display: block;
+            position: absolute;
+            z-index: 2;
+        }
+
+        .illustration-desktop {
+            position: absolute;
+            top: -50%;
+        }
+
+        .background-desktop {
+            position: absolute;
+            left: -490px;
+            top: calc(50% - 50px);
+            transform: translateY(-50%);
+            
+        }
+
+        .illustration-box {
+            // position: absolute;
+            top:0;
+            left: 0;
+            
+        }
+
+        
+    }
 }
 
 .title {
@@ -45,6 +98,10 @@ body {
     line-height: 40px;
     color: #1E1F36;
     align-self: center;
+
+    @media (min-width: 1440px) {
+        align-self: flex-start;
+    }
 }
 
 .accordion {
@@ -71,11 +128,17 @@ body {
             }
 
             p{
+                transition: 0.5s;
 
+                @media (min-width: 1440px) {
+                    font-size: 14px;
+                    line-height: 17px;
+                }
 
                 &:hover {
                     cursor: pointer;
                     color: #F47B56;
+                    transition: 0.5s;
                 } 
             }
 
@@ -104,6 +167,10 @@ body {
             color: #787887;
             max-width: 268px;
             display: none;
+
+            @media (min-width: 1440px) {
+                max-width: 319px;
+            }
         }
 
         .show {
