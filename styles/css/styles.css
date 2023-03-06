@@ -48,15 +48,14 @@ table {
   border-spacing: 0;
 }
 
-* {
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-}
-
 body {
   font-family: "Kumbh Sans", sans-serif;
   background: -webkit-gradient(linear, left top, left bottom, from(#B068E9), to(#6463E7));
   background: linear-gradient(180deg, #B068E9 0%, #6463E7 100%);
+  min-height: 100vh;
+  padding: 148px 0 95px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .main_container {
@@ -76,7 +75,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 148px auto 95px;
+  margin: auto;
 }
 .main_container .image {
   position: absolute;
@@ -111,7 +110,6 @@ body {
   margin-top: 40px;
 }
 .accordion .accordion_div {
-  font-weight: 400;
   font-size: 13px;
   line-height: 16px;
   color: #4B4C5F;
@@ -129,12 +127,30 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.accordion .accordion_div .visible_part .question_light {
+  font-weight: 400;
+}
+.accordion .accordion_div .visible_part .question_bold {
+  font-weight: 700;
+}
 .accordion .accordion_div .visible_part p:hover {
   cursor: pointer;
   color: #F47B56;
 }
-.accordion .accordion_div .visible_part svg:hover {
+.accordion .accordion_div .visible_part .arrow {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.accordion .accordion_div .visible_part .arrow:hover {
   cursor: pointer;
+}
+.accordion .accordion_div .visible_part .arrow_rotate_clockwise {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.accordion .accordion_div .visible_part .arrow_rotate_counterclockwise {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 .accordion .accordion_div .answer {
   margin-top: 13px;
@@ -143,6 +159,13 @@ body {
   line-height: 18px;
   color: #787887;
   max-width: 268px;
+  display: none;
+}
+.accordion .accordion_div .show {
+  display: block;
+}
+.accordion .accordion_div .hide {
+  display: none;
 }
 .accordion .accordion_div:not(:first-child) {
   margin-top: 19px;
