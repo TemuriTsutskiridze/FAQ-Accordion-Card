@@ -28,7 +28,10 @@ body {
     @media (min-width: 1440px) {
         width: 920px;
         padding: 65px 95px 83px 475px;
-        overflow: hidden;
+        
+        background-image: url(/images/illustration-woman-online-desktop.svg), url(/images/bg-pattern-desktop.svg);
+        background-repeat: no-repeat no-repeat;
+        background-position: top 50% left -90px, top 50% right 532px;
     }
 
     .image-mobile {
@@ -55,41 +58,20 @@ body {
         }
     }
 
-    .image-desktop {
-        display: none;
+    .illustration-box {
         position: absolute;
-        left: -90px;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 40.5%;
+        left: 0;
+        transform: translateX(-50%);
+        display: none;
 
         @media (min-width: 1440px) {
-            display: block;
-            position: absolute;
-            z-index: 2;
+            display: inline-block;
         }
-
-        .illustration-desktop {
-            position: absolute;
-            top: -50%;
-        }
-
-        .background-desktop {
-            position: absolute;
-            left: -490px;
-            top: calc(50% - 50px);
-            transform: translateY(-50%);
-            
-        }
-
-        .illustration-box {
-            // position: absolute;
-            top:0;
-            left: 0;
-            
-        }
+    }
 
         
-    }
+    
 }
 
 .title {
