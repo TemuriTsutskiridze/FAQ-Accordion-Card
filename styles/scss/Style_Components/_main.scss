@@ -69,9 +69,6 @@ body {
             display: inline-block;
         }
     }
-
-        
-    
 }
 
 .title {
@@ -101,14 +98,6 @@ body {
             align-items: center;
             justify-content: space-between;
 
-            .question_light {
-                font-weight: 400;
-            }
-
-            .question_bold {
-                font-weight: 700;
-            }
-
             p{
                 transition: 0.5s;
 
@@ -130,14 +119,6 @@ body {
                 &:hover {
                     cursor: pointer;
                 }
-            }
-
-            .arrow_rotate_clockwise {
-                transform: rotate(180deg);
-            }
-
-            .arrow_rotate_counterclockwise {
-                transform: rotate(-180deg);
             }
         }
 
@@ -166,5 +147,19 @@ body {
 
     .accordion_div:not(:first-child) {
         margin-top: 19px;
+    }
+}
+
+.show_answer {
+    .arrow {
+        transform: rotate(180deg);
+    }
+
+    .answer {
+        display: block !important;
+    }
+
+    .question {
+        font-weight: 700;
     }
 }
